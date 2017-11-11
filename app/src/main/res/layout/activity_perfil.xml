@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.strangerfinder.strangerfinder.PerfilActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/logo"
+      />
+
+     <LinearLayout
+         android:layout_marginTop="10dp"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_weight="5"
+         android:orientation="vertical"
+         android:gravity="center_horizontal">
+
+         <EditText
+             android:gravity="left"
+             android:layout_width="200dp"
+             android:layout_height="wrap_content"
+             android:hint="Escribe tu nombre..."
+             android:singleLine="true"
+             android:id="@+id/txtNombre"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Soy" />
+
+         <RadioGroup
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="10dp"
+             android:id="@+id/rgSexo"
+             android:orientation="horizontal">
+
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="hombre"
+                 android:id="@+id/rbHombre"/>
+
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="mujer"
+                 android:id="@+id/rbMujer"/>
+
+
+         </RadioGroup>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="10dp"
+             android:text="Busco" />
+
+         <RadioGroup
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="10dp"
+             android:id="@+id/rgPreferencia"
+             android:orientation="horizontal">
+
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="hombre"
+                 android:id="@+id/rbPrefHombre"/>
+
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="mujer"
+                 android:id="@+id/rbPrefMujer"/>
+
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Ambos"
+                 android:id="@+id/rbPrefAmbos"/>
+
+         </RadioGroup>
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="¡Comenzar!"
+             android:id="@+id/btnComenzar"/>
+
+     </LinearLayout>
+</LinearLayout>

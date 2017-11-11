@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]
