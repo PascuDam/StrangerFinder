@@ -1,7 +1,8 @@
 package com.example.strangerfinder.strangerfinder;
 
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
@@ -10,10 +11,6 @@ import android.widget.Toast;
 
 import com.example.strangerfinder.strangerfinder.Models.Usuario;
 
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class PerfilActivity extends AppCompatActivity {
 
     private Button btnComenzar;
@@ -21,9 +18,6 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView txtNombre;
     private RadioGroup rgSexo;
     private RadioGroup rgPreferencia;
-
-    // Obtenemos la base de datos de firebase
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,26 +66,11 @@ public class PerfilActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Hay campos sin rellenar", Toast.LENGTH_LONG).show();
                 } else{
 
-                    // Terminamos de formar el usuario
-                    usuario.setNombre(txtNombre.getText().toString());
-
-                    // Buscamos la referencia del directorio users
-
-
-                    // ponemos el usuario en un mapa
-                    Map<String,Object> mapa = new HashMap<String, Object>();
-                    mapa.put(usuario.getNombre(), usuario);
-
-                    // añadimos el mapa con el usuario a la BBDD
-                                                           // AHORA MISMO SUSTITUILLE TODA LA BBDD EN VEZ DE AÑADIRLO
-
-
-                    // buscamos una pareja
 
                     // comenzamos el chat
-                    //Intent intent = new Intent(PerfilActivity.this, ChatActivity.class);
+                    Intent intent = new Intent(PerfilActivity.this, ChatActivity.class);
                     //intent.putExtra("persona",Usuario);
-                    //startActivity(intent);
+                    startActivity(intent);
 
                 }
 

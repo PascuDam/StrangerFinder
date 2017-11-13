@@ -92,12 +92,12 @@
         "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",

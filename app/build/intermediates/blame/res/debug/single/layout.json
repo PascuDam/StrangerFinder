@@ -1,7 +1,15 @@
 [
     {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_derecha.xml",
+        "source": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\src\\main\\res\\layout\\msg_derecha.xml"
+    },
+    {
         "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_izquierda.xml",
+        "source": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\src\\main\\res\\layout\\msg_izquierda.xml"
     },
     {
         "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
@@ -16,16 +24,16 @@
         "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
