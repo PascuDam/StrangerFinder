@@ -29,7 +29,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.strangerfinder.strangerfinder.PerfilActivity" >
+        <activity android:name="com.example.strangerfinder.strangerfinder.HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.strangerfinder.strangerfinder.ChatActivity" />
-        <activity android:name="com.example.strangerfinder.strangerfinder.HomeActivity" />
+        <activity android:name="com.example.strangerfinder.strangerfinder.PerfilActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
