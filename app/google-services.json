@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "29191420461",
+    "firebase_url": "https://strangerfinder-63f9b.firebaseio.com",
+    "project_id": "strangerfinder-63f9b",
+    "storage_bucket": "strangerfinder-63f9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29191420461:android:da9c5ffdde09cd3a",
+        "android_client_info": {
+          "package_name": "com.example.strangerfinder.strangerfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29191420461-caua7v3egv8ih00gv9ftk1ug59a830pq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.strangerfinder.strangerfinder",
+            "certificate_hash": "ff0e235d7ea5376ec484010ca7f560ff96c744fa"
+          }
+        },
+        {
+          "client_id": "29191420461-u9osv32nn8nc5bjhfmtqmqpt9ejg9obm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Lxebhm4gaXbFd7cMmj96-hHvfICXWV0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29191420461-u9osv32nn8nc5bjhfmtqmqpt9ejg9obm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

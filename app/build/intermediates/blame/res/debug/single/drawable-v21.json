@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\alvar\\AndroidProjects\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\alvar\\.android\\build-cache\\bb4d5587f5a7e884fd6f02455a5ec41e67d8f4b0\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-v21\\notification_action_background.xml"
+        "merged": "C:\\Users\\alvar\\AndroidProjects\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\alvar\\.android\\build-cache\\bb4d5587f5a7e884fd6f02455a5ec41e67d8f4b0\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "merged": "C:\\Users\\alvar\\AndroidProjects\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\alvar\\.android\\build-cache\\bb4d5587f5a7e884fd6f02455a5ec41e67d8f4b0\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Jimmy\\.android\\build-cache\\3f6e9df4133316e4e2ca23b413a3538c2b7386fc\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "C:\\Users\\alvar\\AndroidProjects\\StrangerFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\alvar\\.android\\build-cache\\bb4d5587f5a7e884fd6f02455a5ec41e67d8f4b0\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
     }
 ]
