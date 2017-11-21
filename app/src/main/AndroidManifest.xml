@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChatActivity" />
-        <activity android:name=".PerfilActivity"/>
+        <activity android:name=".PerfilActivity" />
+        <activity android:name=".LookingForActivity"></activity>
     </application>
 
 </manifest>

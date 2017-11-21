@@ -1,5 +1,6 @@
 package com.example.strangerfinder.strangerfinder;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,40 +50,46 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        //Funcion para subir un usuario a free_users
         btStartToChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean isEvererythingCorrect;
 
-                //STEP 1: verifying the username is correct
+                //PASO 1: verificar que el username es correcto
                 isEvererythingCorrect = !etUsername.getText().toString().isEmpty();
 
-                //STEP 2: verifying that the kind of sex has been chosen
+                //PASO 2: comprobar que se ha escogido un sexo
                 if(isEvererythingCorrect)
                     isEvererythingCorrect = verifyRadioButtons(rgSex);
                 else{
                     etUsername.setError("You should choose an username");
                 }
-                //STEP 3: verifying that the preference has been chosen
+                //PASO 3: comprobar que se ha escogido una preferencia
                 if(isEvererythingCorrect)
                     isEvererythingCorrect = verifyRadioButtons(rgPreference);
 
-                //STEP 4: Creating a user and searching a partner
+                //PASO 4: Crear un usuario y subirlo a la BD
                 if(isEvererythingCorrect){
 
-                    //STEP 1: connecting with firebase
+                    //PASO 1: conectar con firebase
                     database = FirebaseDatabase.getInstance();
                     myRef = database.getReference("free_users");
 
-                    //STEP 2: creating the user
+                    //PASO 2: crear el objeto usuario
                     Usuario user = new Usuario();
                     user.setNombre(etUsername.getText().toString());
+                    //TODO: obtener el sexo y la preferencia de los radiobuttons
                     user.setPreferencia(1);
                     user.setSexo(0);
 
                     Log.e("USER",user.toString());
-                    //STEP 3: going to free_user and generate a new user with data
+                    //PASO 3: subir el nuevo usuario a free_users dentro del Json, con push(key)
                     myRef.push().setValue(user);
+
+                    //PASO 4: pasar al LookingForActivity para buscar un user para chatear
+                    Intent intent = new Intent(HomeActivity.this,LookingForActivity.class);
+                    startActivity(intent);
                 }
 
             }
@@ -90,6 +97,11 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Funcion para comprobar si un RadioButton ha sido seleccionado
+     * @param rg - hace referencia al RadioGroup que se le pasa por parametro
+     * @return - devuelve un booleano que nos indica si se ha escogido o no un RB
+     */
     private boolean verifyRadioButtons(RadioGroup rg){
         boolean isChosen = false;
 
