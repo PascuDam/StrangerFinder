@@ -16,18 +16,28 @@ import com.example.strangerfinder.strangerfinder.Models.Usuario;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class HomeActivity extends AppCompatActivity {
 
+    @BindView(R.id.bt_start)
     Button btStart;
+    @BindView(R.id.bt_start_to_chat)
     Button btStartToChat;
+    @BindView(R.id.et_username)
     EditText etUsername;
+    @BindView(R.id.rg_your_sex)
     RadioGroup rgSex;
+    @BindView(R.id.rg_looking_for)
     RadioGroup rgPreference;
     RadioButton rbSexChose;
     RadioButton rbPreferenceChose;
+    @BindView(R.id.ly_menu)
     LinearLayout lyMenu;
+
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -35,12 +45,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        btStart = (Button) findViewById(R.id.bt_start);
-        btStartToChat = (Button) findViewById(R.id.bt_start_to_chat);
-        etUsername = (EditText) findViewById(R.id.et_username);
-        rgSex = (RadioGroup) findViewById(R.id.rg_your_sex);
-        rgPreference = (RadioGroup) findViewById(R.id.rg_looking_for);
-        lyMenu = (LinearLayout) findViewById(R.id.ly_menu);
+
+        //Funcion para ejecutar ButterKnife
+        ButterKnife.bind(this);
 
         btStart.setOnClickListener(new View.OnClickListener() {
             @Override

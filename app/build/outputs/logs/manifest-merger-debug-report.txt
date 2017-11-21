@@ -8,6 +8,7 @@ MERGED from [com.android.support:appcompat-v7:25.3.1] /home/jnoma/.gradle/caches
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/jnoma/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/8a2ec013b8a20310c12697d8b86a2150/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-messaging:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.0.1.aar/837e9681148ac3161c98f0661897e5c1/AndroidManifest.xml:16:1-30:12
 MERGED from [com.google.firebase:firebase-database:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-database-10.0.1.aar/80fa645d699e71aeb78efcceb2238d11/AndroidManifest.xml:2:1-4:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/860883327892d2a333273fefa1c9b5c4/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-core-10.0.1.aar/098b6e0caed31ed2d5ea10da56a3cab8/AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/c32765342a7a0bb851e97cd409658616/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/dad5ca72e5ee178f9408ea253542769e/AndroidManifest.xml:17:1-28:12
@@ -129,6 +130,8 @@ MERGED from [com.google.firebase:firebase-messaging:10.0.1] /home/jnoma/.gradle/
 MERGED from [com.google.firebase:firebase-messaging:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.0.1.aar/837e9681148ac3161c98f0661897e5c1/AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-database:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-database-10.0.1.aar/80fa645d699e71aeb78efcceb2238d11/AndroidManifest.xml:3:5-42
 MERGED from [com.google.firebase:firebase-database:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-database-10.0.1.aar/80fa645d699e71aeb78efcceb2238d11/AndroidManifest.xml:3:5-42
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/860883327892d2a333273fefa1c9b5c4/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/860883327892d2a333273fefa1c9b5c4/AndroidManifest.xml:5:5-43
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-core-10.0.1.aar/098b6e0caed31ed2d5ea10da56a3cab8/AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/firebase-core-10.0.1.aar/098b6e0caed31ed2d5ea10da56a3cab8/AndroidManifest.xml:4:5-42
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/jnoma/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/c32765342a7a0bb851e97cd409658616/AndroidManifest.xml:20:5-44
