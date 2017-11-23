@@ -9,12 +9,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.strangerfinder.strangerfinder.Models.Usuario;
+import com.example.strangerfinder.strangerfinder.Models.User;
 
 public class PerfilActivity extends AppCompatActivity {
 
     private Button btnComenzar;
-    private Usuario usuario;
+    private User user;
     private TextView txtNombre;
     private RadioGroup rgSexo;
     private RadioGroup rgPreferencia;
@@ -29,15 +29,15 @@ public class PerfilActivity extends AppCompatActivity {
         rgSexo = (RadioGroup) findViewById(R.id.rgSexo);
         rgPreferencia = (RadioGroup) findViewById(R.id.rgPreferencia);
 
-        usuario = new Usuario();
+        user = new User();
 
         rgSexo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.rbHombre){
-                    usuario.setSexo(1);
+                    user.setSex("");
                 }else if (checkedId == R.id.rbMujer){
-                    usuario.setSexo(0);
+                    user.setSex("");
                 }
 
             }
@@ -47,11 +47,11 @@ public class PerfilActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.rbPrefHombre){
-                    usuario.setPreferencia(1);
+                    user.setPreference("");
                 }else if (checkedId == R.id.rbPrefMujer){
-                    usuario.setPreferencia(0);
+                    user.setPreference("");
                 }else if (checkedId == R.id.rbPrefAmbos){
-                    usuario.setPreferencia(2);
+                    user.setPreference("");
                 }
 
             }
@@ -62,14 +62,14 @@ public class PerfilActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Comprobamos el formulario
-                if(txtNombre.getText().toString().equals("") || usuario.getSexo()==-1 || usuario.getPreferencia() == -1){
+                if(txtNombre.getText().toString().equals("") || user.getSex().isEmpty() || user.getPreference().isEmpty()){
                     Toast.makeText(getApplicationContext(), "Hay campos sin rellenar", Toast.LENGTH_LONG).show();
                 } else{
 
 
                     // comenzamos el chat
                     Intent intent = new Intent(PerfilActivity.this, ChatActivity.class);
-                    //intent.putExtra("persona",Usuario);
+                    //intent.putExtra("persona",User);
                     startActivity(intent);
 
                 }

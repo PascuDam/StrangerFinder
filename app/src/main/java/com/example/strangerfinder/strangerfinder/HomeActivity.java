@@ -1,7 +1,6 @@
 package com.example.strangerfinder.strangerfinder;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,14 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.example.strangerfinder.strangerfinder.Models.Usuario;
+import com.example.strangerfinder.strangerfinder.Models.User;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -57,45 +54,47 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        //Funcion para subir un usuario a free_users
+        /*Funcion para subir un user a free_users
+        * */
         btStartToChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isEvererythingCorrect;
+                boolean isOk;
 
                 //PASO 1: verificar que el username es correcto
-                isEvererythingCorrect = !etUsername.getText().toString().isEmpty();
+                isOk = !etUsername.getText().toString().isEmpty();
 
                 //PASO 2: comprobar que se ha escogido un sexo
-                if(isEvererythingCorrect)
-                    isEvererythingCorrect = verifyRadioButtons(rgSex);
+                if(isOk)
+                    isOk = verifyRadioButtons(rgSex);
                 else{
                     etUsername.setError("You should choose an username");
                 }
                 //PASO 3: comprobar que se ha escogido una preferencia
-                if(isEvererythingCorrect)
-                    isEvererythingCorrect = verifyRadioButtons(rgPreference);
+                if(isOk)
+                    isOk = verifyRadioButtons(rgPreference);
 
-                //PASO 4: Crear un usuario y subirlo a la BD
-                if(isEvererythingCorrect){
+                //PASO 4: Crear un user y subirlo a la BD
+                if(isOk){
 
                     //PASO 1: conectar con firebase
                     database = FirebaseDatabase.getInstance();
                     myRef = database.getReference("free_users");
 
-                    //PASO 2: crear el objeto usuario
-                    Usuario user = new Usuario();
-                    user.setNombre(etUsername.getText().toString());
+                    //PASO 2: crear el objeto user
+                    User user = new User();
+                    user.setName(etUsername.getText().toString());
                     //TODO: obtener el sexo y la preferencia de los radiobuttons
-                    user.setPreferencia(1);
-                    user.setSexo(0);
+                    user.setPreference("");
+                    user.setSex("");
 
                     Log.e("USER",user.toString());
-                    //PASO 3: subir el nuevo usuario a free_users dentro del Json, con push(key)
+                    //PASO 3: subir el nuevo user a free_users dentro del Json, con push(key)
                     myRef.push().setValue(user);
 
                     //PASO 4: pasar al LookingForActivity para buscar un user para chatear
                     Intent intent = new Intent(HomeActivity.this,LookingForActivity.class);
+                    intent.putExtra("user",user);
                     startActivity(intent);
                 }
 

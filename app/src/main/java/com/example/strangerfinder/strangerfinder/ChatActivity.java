@@ -12,14 +12,14 @@ import android.widget.TextView;
 
 import com.example.strangerfinder.strangerfinder.Helpers.ChatArrayAdapter;
 import com.example.strangerfinder.strangerfinder.Models.Mensaje;
-import com.example.strangerfinder.strangerfinder.Models.Usuario;
+import com.example.strangerfinder.strangerfinder.Models.User;
 
 
 
 public class ChatActivity extends AppCompatActivity {
 
-    Usuario usuario;
-    Usuario extraño;
+    User user;
+    User extraño;
     TextView nombre;
     EditText txtTexto;
     Button btnEnviar;
