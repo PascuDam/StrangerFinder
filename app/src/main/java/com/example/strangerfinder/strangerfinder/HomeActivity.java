@@ -30,11 +30,20 @@ public class HomeActivity extends AppCompatActivity {
     RadioGroup rgSex;
     @BindView(R.id.rg_looking_for)
     RadioGroup rgPreference;
-    RadioButton rbSexChose;
-    RadioButton rbPreferenceChose;
+    @BindView(R.id.rb_female)
+    RadioButton rbSexFem;
+    @BindView(R.id.rb_male)
+    RadioButton rbSexMal;
+    @BindView(R.id.rb_lf_female)
+    RadioButton rbPreferenceFem;
+    @BindView(R.id.rb_lf_male)
+    RadioButton rbPreferenceMal;
+    @BindView(R.id.rb_lf_both)
+    RadioButton rbPreferenceBoth;
     @BindView(R.id.ly_menu)
     LinearLayout lyMenu;
 
+    User user;
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -60,6 +69,8 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean isOk;
+                String sex;
+                String preference;
 
                 //PASO 1: verificar que el username es correcto
                 isOk = !etUsername.getText().toString().isEmpty();
@@ -82,17 +93,24 @@ public class HomeActivity extends AppCompatActivity {
                     myRef = database.getReference("free_users");
 
                     //PASO 2: crear el objeto user
-                    User user = new User();
+                    user = new User();
                     user.setName(etUsername.getText().toString());
-                    //TODO: obtener el sexo y la preferencia de los radiobuttons
-                    user.setPreference("");
-                    user.setSex("");
 
-                    Log.e("USER",user.toString());
-                    //PASO 3: subir el nuevo user a free_users dentro del Json, con push(key)
+                    //Obtener la preferencia del usuario
+                    preference = obtainingSex(Boolean.TRUE);
+                    user.setPreference(preference);
+
+                    //Obtener el sexo del usuario
+                    sex = obtainingSex(Boolean.FALSE);
+                    user.setSex(sex);
+
+                    //PASO 3: Obtener el codigo de la busqueda
+                    obtainingCode();
+
+                    //PASO 4: subir el nuevo user a free_users dentro del Json, con push(key)
                     myRef.push().setValue(user);
 
-                    //PASO 4: pasar al LookingForActivity para buscar un user para chatear
+                    //PASO 5: pasar al LookingForActivity para buscar un user para chatear
                     Intent intent = new Intent(HomeActivity.this,LookingForActivity.class);
                     intent.putExtra("user",user);
                     startActivity(intent);
@@ -116,5 +134,68 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return isChosen;
+    }
+
+    //Método para obtener el sexo del usuario y la preferencia de este
+    private String obtainingSex(boolean isPreference){
+        String sex;
+
+        //Si buscamos la preferencia ejecutamos el siguiente if
+        if(isPreference){
+            if(rbPreferenceFem.isChecked())
+                sex = "female";
+            else if(rbPreferenceMal.isChecked())
+                sex = "male";
+            else
+                sex = "both";
+        }else{
+            if(rbPreferenceFem.isChecked())
+                sex = "female";
+            else
+                sex = "male";
+        }
+
+        return sex;
+    }
+
+
+    //Método para obtener el searchCode del usuario
+    private void obtainingCode(){
+        /**
+         * masculino - masculino = code 1
+         * femenino - femenino = code 2
+         * masculino - femenino = code 3
+         * femenino - masculino = code 4
+         * masculino - ambos = code 5
+         * femenino - ambos = code 6
+         */
+
+        if(user.getSex().equals("male")){
+            switch(user.getPreference()){
+                case "male":
+                    user.setSearchCode((byte)1);
+                    break;
+                case "female":
+                    user.setSearchCode((byte)3);
+                    break;
+                case "both":
+                    user.setSearchCode((byte)5);
+                    break;
+            }
+        }
+
+        if(user.getSex().equals("female")){
+            switch(user.getPreference()){
+                case "female":
+                    user.setSearchCode((byte)2);
+                    break;
+                case "male":
+                    user.setSearchCode((byte)4);
+                    break;
+                case "both":
+                    user.setSearchCode((byte)6);
+                    break;
+            }
+        }
     }
 }

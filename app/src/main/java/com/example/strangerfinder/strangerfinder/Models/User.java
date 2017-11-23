@@ -20,11 +20,11 @@ public class User implements Parcelable {
 
     }
 
-
     protected User(Parcel in) {
         name = in.readString();
         sex = in.readString();
         preference = in.readString();
+        searchCode = in.readByte();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -63,6 +63,13 @@ public class User implements Parcelable {
         this.preference = preference;
     }
 
+    public byte getSearchCode() {
+        return searchCode;
+    }
+
+    public void setSearchCode(byte searchCode) {
+        this.searchCode = searchCode;
+    }
 
     @Override
     public int describeContents() {
@@ -74,5 +81,6 @@ public class User implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(sex);
         parcel.writeString(preference);
+        parcel.writeByte(searchCode);
     }
 }

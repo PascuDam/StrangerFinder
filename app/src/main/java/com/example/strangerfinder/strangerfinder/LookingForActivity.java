@@ -40,12 +40,39 @@ public class LookingForActivity extends AppCompatActivity {
 
                     //PASO 2: si contiene hijos los recorremos en un bucle
                     for(DataSnapshot currentChildren : dataSnapshot.getChildren()){
-                        User user = currentChildren.getValue(User.class);
+                        User currentUser = currentChildren.getValue(User.class);
 
-                        //PASO 3: comprobamos si alguno coincide con nuestra busqueda
+                        /*PASO 3: comprobamos si alguno coincide con nuestra busqueda
+                        * para ello utilizamos el sistema de codigos (searchCode)*/
+                        /**
+                         * Code 1 - code 1 y 5
+                         * Code 2 - code 2 y 6
+                         * Code 3 - code 4 y 5
+                         * code 4 - code 3 y 6
+                         * Code 5 - 1,3,6
+                         * Code 6 - 2,4,5
+                         */
 
-
-
+                        switch (user.getSearchCode()){
+                            case 1:
+                                if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 5)
+                                break;
+                            case 2:
+                                if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 6)
+                                break;
+                            case 3:
+                                if(currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5)
+                                break;
+                            case 4:
+                                if(currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6)
+                                break;
+                            case 5:
+                                if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6)
+                                break;
+                            case 6:
+                                if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5)
+                                break;
+                        }
                     }
                 }else{
                     //De lo contrario lanzamos un mensaje para indicar que no hay users
