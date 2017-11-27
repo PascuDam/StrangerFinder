@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.strangerfinder.strangerfinder.LookingForActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryLight">
 
 
     <ProgressBar
@@ -27,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Looking for a strange..."
-        android:textColor="#fff"
+        android:text="@string/ms_looking_for"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/progressBar2"
         app:layout_constraintHorizontal_bias="0.493"

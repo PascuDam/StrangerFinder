@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">StrangerFinder</string>
+
+    <!--Elements-->
+    <string name="bt_start">Start!</string>
+    <string name="bt_ready">I Am Ready!</string>
+    <string name="et_username">Tip a username :)</string>
+    <string name="tv_sex">You are a: </string>
+    <string name="tv_lf">You are looking for:</string>
+    <string name="rb_im_boy">Boy</string>
+    <string name="rb_im_girl">Girl</string>
+    <string name="rb_lf_girl">A girl</string>
+    <string name="rb_lf_boy">A boy</string>
+    <string name="rb_lf_no_matter">Doesn\'t matter</string>
+
+    <!--Messages-->
+    <string name="ms_looking_for">Looking for a strange...</string>
 </resources>
