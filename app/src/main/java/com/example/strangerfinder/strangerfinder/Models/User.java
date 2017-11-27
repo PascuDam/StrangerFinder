@@ -8,23 +8,26 @@ public class User implements Parcelable {
     private String name;
     private String sex;
     private String preference;
-    private byte searchCode;
+    private int searchCode;
+    private int id;
 
     public User(String name, String sex, String preference) {
         this.name = name;
         this.sex = sex;
         this.preference = preference;
+        this.id = (int) (Math.random()*10000);
     }
 
     public User() {
-
+        this.id = (int) (Math.random()*100);
     }
 
     protected User(Parcel in) {
         name = in.readString();
         sex = in.readString();
         preference = in.readString();
-        searchCode = in.readByte();
+        searchCode = in.readInt();
+        id = in.readInt();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -63,12 +66,27 @@ public class User implements Parcelable {
         this.preference = preference;
     }
 
-    public byte getSearchCode() {
+    public int getSearchCode() {
         return searchCode;
     }
 
-    public void setSearchCode(byte searchCode) {
+    public void setSearchCode(int searchCode) {
         this.searchCode = searchCode;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", preference='" + preference + '\'' +
+                ", searchCode=" + searchCode +
+                ", id=" + id +
+                '}';
     }
 
     @Override
@@ -81,6 +99,7 @@ public class User implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(sex);
         parcel.writeString(preference);
-        parcel.writeByte(searchCode);
+        parcel.writeInt(searchCode);
+        parcel.writeInt(id);
     }
 }

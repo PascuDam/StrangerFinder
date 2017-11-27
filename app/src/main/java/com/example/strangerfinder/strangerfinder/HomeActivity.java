@@ -173,13 +173,13 @@ public class HomeActivity extends AppCompatActivity {
         if(user.getSex().equals("male")){
             switch(user.getPreference()){
                 case "male":
-                    user.setSearchCode((byte)1);
+                    user.setSearchCode(1);
                     break;
                 case "female":
-                    user.setSearchCode((byte)3);
+                    user.setSearchCode(3);
                     break;
                 case "both":
-                    user.setSearchCode((byte)5);
+                    user.setSearchCode(5);
                     break;
             }
         }
@@ -187,13 +187,13 @@ public class HomeActivity extends AppCompatActivity {
         if(user.getSex().equals("female")){
             switch(user.getPreference()){
                 case "female":
-                    user.setSearchCode((byte)2);
+                    user.setSearchCode(2);
                     break;
                 case "male":
-                    user.setSearchCode((byte)4);
+                    user.setSearchCode(4);
                     break;
                 case "both":
-                    user.setSearchCode((byte)6);
+                    user.setSearchCode(6);
                     break;
             }
         }
