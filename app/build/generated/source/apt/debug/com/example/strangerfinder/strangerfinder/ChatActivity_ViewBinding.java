@@ -6,7 +6,6 @@ import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import java.lang.IllegalStateException;
@@ -24,7 +23,6 @@ public class ChatActivity_ViewBinding implements Unbinder {
   public ChatActivity_ViewBinding(ChatActivity target, View source) {
     this.target = target;
 
-    target.listaMensajes = Utils.findRequiredViewAsType(source, R.id.listaMensajes, "field 'listaMensajes'", ListView.class);
     target.btnEnviar = Utils.findRequiredViewAsType(source, R.id.btnEnviar, "field 'btnEnviar'", Button.class);
     target.txtTexto = Utils.findRequiredViewAsType(source, R.id.txtTexto, "field 'txtTexto'", EditText.class);
   }
@@ -36,7 +34,6 @@ public class ChatActivity_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
-    target.listaMensajes = null;
     target.btnEnviar = null;
     target.txtTexto = null;
   }

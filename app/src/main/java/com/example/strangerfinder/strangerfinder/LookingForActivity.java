@@ -44,6 +44,10 @@ public class LookingForActivity extends AppCompatActivity {
                 //PASO 1: comprobamos que el dataSnapshot contiene hijos
                 if(dataSnapshot.hasChildren()){
 
+                    int idCurrentUser=0;
+
+
+
                     //PASO 2: si contiene hijos los recorremos en un bucle
                     for(DataSnapshot currentChildren : dataSnapshot.getChildren()){
                         User currentUser = currentChildren.getValue(User.class);
@@ -63,49 +67,75 @@ public class LookingForActivity extends AppCompatActivity {
                         if(currentUser.getId() != user.getId()){
                             switch (user.getSearchCode()){
                                 case 1:
-                                    if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 5)
+                                    if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 5){
                                         match = true;
+                                        idCurrentUser = currentUser.getId();
+
+                                    }
                                     break;
                                 case 2:
-                                    if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 6)
+                                    if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 6){
                                         match = true;
+                                        idCurrentUser = currentUser.getId();
+
+                                    }
                                     break;
                                 case 3:
-                                    if(currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5)
+                                    if(currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5){
                                         match = true;
+                                        idCurrentUser = currentUser.getId();
+
+                                    }
                                     break;
                                 case 4:
-                                    if(currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6)
+                                    if(currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6){
                                         match = true;
+                                        idCurrentUser = currentUser.getId();
+
+                                    }
                                     break;
                                 case 5:
-                                    if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6)
+                                    if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6 || currentUser.getSearchCode() == 5){
                                         match = true;
+                                        idCurrentUser = currentUser.getId();
+
+                                    }
                                     break;
                                 case 6:
-                                    if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5)
+                                    if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5 || currentUser.getSearchCode() == 6){
                                         match = true;
+                                        idCurrentUser = currentUser.getId();
+
+                                    }
+
+
                                     break;
                             }
 
-                            if(match){
-                                if(currentUser.getId()>user.getId()){
-                                    room = user.getId()+""+currentUser.getId();
-                                } else {
-                                    room = currentUser.getId()+""+user.getId();
-                                }
 
-                                Intent intent = new Intent(LookingForActivity.this, ChatActivity.class);
-
-                                intent.putExtra("user", user);
-                                intent.putExtra("room", room);
-
-                                startActivity(intent);
-                            }
 
                         }
+
+                        if(match){
+                            break;
+                        }
+
                     }
 
+                    if(match){
+                        if(idCurrentUser>user.getId()){
+                            room = user.getId()+""+idCurrentUser;
+                        } else {
+                            room = idCurrentUser+""+user.getId();
+                        }
+
+                        Intent intent = new Intent(LookingForActivity.this, ChatActivity.class);
+
+                        intent.putExtra("user", user);
+                        intent.putExtra("room", room);
+
+                        startActivity(intent);
+                    }
 
 
                 }else{

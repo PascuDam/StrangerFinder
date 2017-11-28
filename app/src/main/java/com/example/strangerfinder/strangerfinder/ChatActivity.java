@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -28,20 +29,19 @@ import butterknife.BindView;
 
 public class ChatActivity extends AppCompatActivity {
 
-    @BindView(R.id.listaMensajes)
+    //@BindView(R.id.listaMensajes)
     ListView listaMensajes;
 
-    @BindView(R.id.btnEnviar)
+    //@BindView(R.id.btnEnviar)
     Button btnEnviar;
 
-    @BindView(R.id.txtTexto)
+    //@BindView(R.id.txtTexto)
     EditText txtTexto;
 
-    String room, rndKey;
+    String room;
     User user;
 
     private ChatArrayAdapter chatArrayAdapter;
-
     private DatabaseReference root;
 
     @Override
@@ -50,6 +50,9 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         // recogemos datos
+        listaMensajes = (ListView) findViewById(R.id.listaMensajes);
+        btnEnviar = (Button) findViewById(R.id.btnEnviar);
+        txtTexto = (EditText) findViewById(R.id.txtTexto);
 
         user = getIntent().getParcelableExtra("user");
         room = getIntent().getExtras().getString("room").toString();
@@ -78,7 +81,7 @@ public class ChatActivity extends AppCompatActivity {
                 Map<String, Object> map = new HashMap<String, Object>();
 
                 // creamos una clave autogenerada para el mensaje
-                rndKey = root.push().getKey();
+                String rndKey = root.push().getKey();
 
                 // añadimos la clave autogenerada a la sala
                 root.updateChildren(map);
@@ -89,8 +92,8 @@ public class ChatActivity extends AppCompatActivity {
                 // creamos un mapa para el mensaje, indicando el nombre del usuario y el mensaje
                 Map<String, Object> map2 = new HashMap<String, Object>();
 
-                map2.put("usuario", user.getName());
-                map2.put("mensaje", txtTexto.getText().toString());
+                map2.put("user", user.getName());
+                map2.put("message", txtTexto.getText().toString());
 
                 // llevamos el mensaje a la base de datos
                 dirMensaje.updateChildren(map2);

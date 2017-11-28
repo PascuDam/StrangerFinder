@@ -11,6 +11,9 @@ public class ReceivedMessage {
         this.message = message;
     }
 
+    public ReceivedMessage() {
+    }
+
     public String getUser() {
         return user;
     }
