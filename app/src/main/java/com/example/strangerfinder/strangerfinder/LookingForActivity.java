@@ -39,14 +39,11 @@ public class LookingForActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 match = false;
+                int idCurrentUser = 0;
                 //Los datos de free_users quedan obtenidos en el parametro dataSnapshot
 
                 //PASO 1: comprobamos que el dataSnapshot contiene hijos
                 if(dataSnapshot.hasChildren()){
-
-                    int idCurrentUser=0;
-
-
 
                     //PASO 2: si contiene hijos los recorremos en un bucle
                     for(DataSnapshot currentChildren : dataSnapshot.getChildren()){
@@ -59,93 +56,84 @@ public class LookingForActivity extends AppCompatActivity {
                          * Code 2 - code 2 y 6
                          * Code 3 - code 4 y 5
                          * code 4 - code 3 y 6
-                         * Code 5 - 1,3,6
-                         * Code 6 - 2,4,5
+                         * Code 5 - 1,3,5,6
+                         * Code 6 - 2,4,5,6
                          */
 
                         //ANTES DE NADA COMPROBAMOS QUE NO SEA EL MISMO USUARIO EL QUE ENCUENTRA
                         if(currentUser.getId() != user.getId()){
+
+                            //Si no es el mismo, entonces comprobamos que es compatible
                             switch (user.getSearchCode()){
                                 case 1:
                                     if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 5){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
-
                                     }
                                     break;
                                 case 2:
                                     if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
-
                                     }
                                     break;
                                 case 3:
                                     if(currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
-
                                     }
                                     break;
                                 case 4:
                                     if(currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
-
                                     }
                                     break;
                                 case 5:
-                                    if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6 || currentUser.getSearchCode() == 5){
+                                    if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 5 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
-
                                     }
                                     break;
                                 case 6:
                                     if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
-
                                     }
 
 
                                     break;
                             }
-
-
-
                         }
-
-                        if(match){
+                        //Si el usuario ha hecho match salimos del bucle
+                        if(match)
                             break;
-                        }
-
                     }
 
+                    //si hemos hecho match creamos la sala y pasamos a ChatActivity
                     if(match){
-                        if(idCurrentUser>user.getId()){
+                        if(idCurrentUser>user.getId())
                             room = user.getId()+""+idCurrentUser;
-                        } else {
+                        else
                             room = idCurrentUser+""+user.getId();
-                        }
 
                         Intent intent = new Intent(LookingForActivity.this, ChatActivity.class);
-
                         intent.putExtra("user", user);
                         intent.putExtra("room", room);
-
                         startActivity(intent);
                     }
 
-
                 }else{
                     //De lo contrario lanzamos un mensaje para indicar que no hay users
+                    //TODO: mensaje
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+                //Si no se puede conectar al servidor se avisará con un mensaje
+                //TODO: mensaje
             }
         });
     }

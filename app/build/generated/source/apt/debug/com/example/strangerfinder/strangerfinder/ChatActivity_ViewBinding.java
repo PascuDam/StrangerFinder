@@ -3,9 +3,10 @@ package com.example.strangerfinder.strangerfinder;
 
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
+import android.support.design.widget.FloatingActionButton;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import butterknife.Unbinder;
 import butterknife.internal.Utils;
 import java.lang.IllegalStateException;
@@ -23,8 +24,9 @@ public class ChatActivity_ViewBinding implements Unbinder {
   public ChatActivity_ViewBinding(ChatActivity target, View source) {
     this.target = target;
 
-    target.btnEnviar = Utils.findRequiredViewAsType(source, R.id.btnEnviar, "field 'btnEnviar'", Button.class);
-    target.txtTexto = Utils.findRequiredViewAsType(source, R.id.txtTexto, "field 'txtTexto'", EditText.class);
+    target.lvMessages = Utils.findRequiredViewAsType(source, R.id.lw_messages, "field 'lvMessages'", ListView.class);
+    target.btSend = Utils.findRequiredViewAsType(source, R.id.bt_send, "field 'btSend'", FloatingActionButton.class);
+    target.et_message = Utils.findRequiredViewAsType(source, R.id.et_message, "field 'et_message'", EditText.class);
   }
 
   @Override
@@ -34,7 +36,8 @@ public class ChatActivity_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
-    target.btnEnviar = null;
-    target.txtTexto = null;
+    target.lvMessages = null;
+    target.btSend = null;
+    target.et_message = null;
   }
 }

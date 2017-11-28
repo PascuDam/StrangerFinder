@@ -39,7 +39,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.strangerfinder.strangerfinder.ChatActivity" />
-        <activity android:name="com.example.strangerfinder.strangerfinder.PerfilActivity" />
         <activity android:name="com.example.strangerfinder.strangerfinder.LookingForActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,

@@ -12,6 +12,8 @@
     <string name="rb_lf_girl">A girl</string>
     <string name="rb_lf_boy">A boy</string>
     <string name="rb_lf_no_matter">Doesn\'t matter</string>
+    <string name="bt_send">Send</string>
+    <string name="tv_talking_with">You are talking with</string>
 
     <!--Messages-->
     <string name="ms_looking_for">Looking for a strange...</string>

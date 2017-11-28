@@ -10,49 +10,40 @@
 
 
     <TextView
+        android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Estas hablando con "
-        android:textAlignment="center"
-        android:id="@+id/txtNombre"
-        />
+        android:text="@string/tv_talking_with"
+        android:textAlignment="center"/>
 
     <ListView
-        android:id="@+id/listaMensajes"
+        android:id="@+id/lw_messages"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:stackFromBottom="true"
         android:transcriptMode="alwaysScroll"
         android:divider="@null"
-        android:dividerHeight="0dp"
-        ></ListView>
+        android:dividerHeight="0dp"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
-            android:layout_width="fill_parent"
-            android:layout_weight="1"
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/bt_send"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/txtTexto"
-            />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:id="@+id/btnEnviar"
-            android:text="enviar"/>
-
-        <!-- Este boton es de prueba para ver como se representan los mensajes con otro estilo -->
-
-
+            android:src="@drawable/ic_send"/>
 
     </LinearLayout>
-
 
 </LinearLayout>

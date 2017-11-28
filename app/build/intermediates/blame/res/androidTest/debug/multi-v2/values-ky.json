@@ -1,10 +1,32 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ky\\values-ky.xml",
+            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\08d45871d263e2b91a36cb91d155247a\\res\\values-ky\\values.xml",
+                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\08d45871d263e2b91a36cb91d155247a\\res\\values-ky\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "220",
+                        "endOffsets": "505"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "220",
+                        "endOffsets": "321"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ky/values-ky.xml",
+            "map": [
+                {
+                    "source": "/home/jnoma/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.0.1.aar/cae9899ac92ca6dd510d7fb342a80cae/res/values-ky/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

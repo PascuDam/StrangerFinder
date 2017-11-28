@@ -1,6 +1,7 @@
 package com.example.strangerfinder.strangerfinder;
 
 import android.database.DataSetObserver;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,18 +26,17 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class ChatActivity extends AppCompatActivity {
 
-    //@BindView(R.id.listaMensajes)
-    ListView listaMensajes;
-
-    //@BindView(R.id.btnEnviar)
-    Button btnEnviar;
-
-    //@BindView(R.id.txtTexto)
-    EditText txtTexto;
+    @BindView(R.id.lw_messages)
+    ListView lvMessages;
+    @BindView(R.id.bt_send)
+    FloatingActionButton btSend;
+    @BindView(R.id.et_message)
+    EditText et_message;
 
     String room;
     User user;
@@ -48,11 +48,7 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-
-        // recogemos datos
-        listaMensajes = (ListView) findViewById(R.id.listaMensajes);
-        btnEnviar = (Button) findViewById(R.id.btnEnviar);
-        txtTexto = (EditText) findViewById(R.id.txtTexto);
+        ButterKnife.bind(this);
 
         user = getIntent().getParcelableExtra("user");
         room = getIntent().getExtras().getString("room").toString();
@@ -62,18 +58,18 @@ public class ChatActivity extends AppCompatActivity {
         root = FirebaseDatabase.getInstance().getReference("chats_room").child(room);
 
         chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.msg_izquierda);
-        listaMensajes.setTranscriptMode(AbsListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
-        listaMensajes.setAdapter(chatArrayAdapter);
+        lvMessages.setTranscriptMode(AbsListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
+        lvMessages.setAdapter(chatArrayAdapter);
 
         chatArrayAdapter.registerDataSetObserver(new DataSetObserver() {
             @Override
             public void onChanged() {
                 super.onChanged();
-                listaMensajes.setSelection(chatArrayAdapter.getCount() - 1);
+                lvMessages.setSelection(chatArrayAdapter.getCount() - 1);
             }
         });
 
-        btnEnviar.setOnClickListener(new View.OnClickListener() {
+        btSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
 
@@ -93,7 +89,7 @@ public class ChatActivity extends AppCompatActivity {
                 Map<String, Object> map2 = new HashMap<String, Object>();
 
                 map2.put("user", user.getName());
-                map2.put("message", txtTexto.getText().toString());
+                map2.put("message", et_message.getText().toString());
 
                 // llevamos el mensaje a la base de datos
                 dirMensaje.updateChildren(map2);
@@ -133,10 +129,10 @@ public class ChatActivity extends AppCompatActivity {
 
     private void enviarMensaje() {
         // Comprobamos si el EditText esta vacio
-        if(!txtTexto.getText().toString().equals("")){
+        if(!et_message.getText().toString().equals("")){
             // añadimos un mensaje a la lista a la derecha
-            chatArrayAdapter.add(new Mensaje(false, txtTexto.getText().toString()));
-            txtTexto.setText("");
+            chatArrayAdapter.add(new Mensaje(false, et_message.getText().toString()));
+            et_message.setText("");
         }
     }
 
