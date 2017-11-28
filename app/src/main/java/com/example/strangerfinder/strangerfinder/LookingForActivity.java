@@ -1,5 +1,6 @@
 package com.example.strangerfinder.strangerfinder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,7 @@ public class LookingForActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     Boolean match;
+    String room;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,11 +64,6 @@ public class LookingForActivity extends AppCompatActivity {
                             switch (user.getSearchCode()){
                                 case 1:
                                     if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 5)
-                                        //PASO 4: si hemos hecho match entonces creamos una nueva chat_room
-
-                                        //PASO 5: guardamos nuestros users en la chat_room
-
-                                        //PASO 6: borramos el user de free_user
                                         match = true;
                                     break;
                                 case 2:
@@ -90,8 +87,27 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                     break;
                             }
+
+                            if(match){
+                                if(currentUser.getId()>user.getId()){
+                                    room = user.getId()+""+currentUser.getId();
+                                } else {
+                                    room = currentUser.getId()+""+user.getId();
+                                }
+
+                                Intent intent = new Intent(LookingForActivity.this, ChatActivity.class);
+
+                                intent.putExtra("user", user);
+                                intent.putExtra("room", room);
+
+                                startActivity(intent);
+                            }
+
                         }
                     }
+
+
+
                 }else{
                     //De lo contrario lanzamos un mensaje para indicar que no hay users
                 }

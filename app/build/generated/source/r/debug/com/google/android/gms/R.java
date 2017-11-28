@@ -8,12 +8,12 @@ package com.google.android.gms;
 
 public final class R {
     public static final class id {
-        public static final int none = 0x7f070044;
-        public static final int normal = 0x7f070045;
-        public static final int radio = 0x7f07004f;
-        public static final int text = 0x7f07007e;
-        public static final int text2 = 0x7f07007f;
-        public static final int wrap_content = 0x7f070090;
+        public static final int none = 0x7f070043;
+        public static final int normal = 0x7f070044;
+        public static final int radio = 0x7f07004e;
+        public static final int text = 0x7f07007d;
+        public static final int text2 = 0x7f07007e;
+        public static final int wrap_content = 0x7f07008f;
     }
     public static final class integer {
         public static final int google_play_services_version = 0x7f080003;

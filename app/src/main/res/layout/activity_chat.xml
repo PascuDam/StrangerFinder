@@ -50,12 +50,6 @@
 
         <!-- Este boton es de prueba para ver como se representan los mensajes con otro estilo -->
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:id="@+id/btnRecibir"
-            android:text="recibir"/>
 
 
     </LinearLayout>
