@@ -107,14 +107,13 @@ public class LookingForActivity extends AppCompatActivity {
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
                                     }
-
-
                                     break;
                             }
                         }
                         //Si el usuario ha hecho match salimos del bucle
-                        if(match)
+                        if(match){
                             break;
+                        }
                     }
 
                     //si hemos hecho match creamos la sala y pasamos a ChatActivity
@@ -130,6 +129,7 @@ public class LookingForActivity extends AppCompatActivity {
                         intent.putExtra("stranger", stranger);
                         startActivity(intent);
                     }
+
 
                 }else{
                     //De lo contrario lanzamos un mensaje para indicar que no hay users

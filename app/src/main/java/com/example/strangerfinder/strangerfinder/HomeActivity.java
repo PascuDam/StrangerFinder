@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
     User user;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    DatabaseReference userKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +109,9 @@ public class HomeActivity extends AppCompatActivity {
                     obtainingCode();
 
                     //PASO 4: subir el nuevo user a free_users dentro del Json, con push(key)
-                    myRef.push().setValue(user);
+                    userKey = myRef.push();
+                    userKey.setValue(user);
+                    user.setKey(userKey.getKey());
 
                     //PASO 5: pasar al LookingForActivity para buscar un user para chatear
                     Intent intent = new Intent(HomeActivity.this,LookingForActivity.class);
