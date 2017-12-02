@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "outputFile": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\08d45871d263e2b91a36cb91d155247a\\res\\values-az\\values.xml",
+                    "source": "C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\8a5ae3e7e04dd944f214dd5ff1289798\\res\\values-az\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -23,10 +23,32 @@
             ]
         },
         {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
+            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
             "map": [
                 {
-                    "source": "/home/jnoma/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.0.1.aar/cae9899ac92ca6dd510d7fb342a80cae/res/values-az/values.xml",
+                    "source": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\08d45871d263e2b91a36cb91d155247a\\res\\values-az\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "220",
+                        "endOffsets": "505"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "220",
+                        "endOffsets": "321"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-az\\values-az.xml",
+            "map": [
+                {
+                    "source": "C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\cae9899ac92ca6dd510d7fb342a80cae\\res\\values-az\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

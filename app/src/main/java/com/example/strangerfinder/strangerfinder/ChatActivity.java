@@ -37,6 +37,8 @@ public class ChatActivity extends AppCompatActivity {
     FloatingActionButton btSend;
     @BindView(R.id.et_message)
     EditText et_message;
+    @BindView(R.id.tv_name)
+    TextView tv_name;
 
     String room;
     User user;
@@ -50,13 +52,15 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         ButterKnife.bind(this);
 
+        //PASO 1: Obtener el user, la sala y el nombre del compañero
         user = getIntent().getParcelableExtra("user");
         room = getIntent().getExtras().getString("room").toString();
+        tv_name.setText(tv_name.getText().toString().concat(getIntent().getExtras().getString("stranger")));
 
-
-        // recogemos la refencia de la sala en la base de datos
+        //PASO 2: Obtener la referencia de la BD de la sala
         root = FirebaseDatabase.getInstance().getReference("chats_room").child(room);
 
+        //PASO 3: Preparamos el chat
         chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.msg_izquierda);
         lvMessages.setTranscriptMode(AbsListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
         lvMessages.setAdapter(chatArrayAdapter);
@@ -69,36 +73,38 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
+        //Funcion para enviar el mensaje
         btSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
 
-                // mapa para gestionar un mensaje en FireBase
+                //PASO 1: Creamos un mapa para gestionar un mensaje en FireBase
                 Map<String, Object> map = new HashMap<String, Object>();
 
-                // creamos una clave autogenerada para el mensaje
+                //PASO 2: Creamos una clave autogenerada para el mensaje
                 String rndKey = root.push().getKey();
 
-                // añadimos la clave autogenerada a la sala
+                //PASO 3: Añadimos la clave autogenerada a la sala
                 root.updateChildren(map);
 
-                // Obtenemos el root del mensaje nuevo a travez de la clave generada
+                //PASO 4: Obtenemos el root del mensaje nuevo a travez de la clave generada
                 DatabaseReference dirMensaje = root.child(rndKey);
 
-                // creamos un mapa para el mensaje, indicando el nombre del usuario y el mensaje
+                //PASO 5: Creamos un mapa para el mensaje, indicando el nombre del usuario y el mensaje
                 Map<String, Object> map2 = new HashMap<String, Object>();
 
                 map2.put("user", user.getName());
                 map2.put("message", et_message.getText().toString());
 
-                // llevamos el mensaje a la base de datos
+                //PASO 6: Llevamos el mensaje a la base de datos
                 dirMensaje.updateChildren(map2);
 
-                // mostramos el mensaje en el chat (lado derecho)
+                //PASO 7: Mostramos el mensaje en el chat (lado derecho)
                 enviarMensaje();
             }
         });
 
+        //Funcion que se ejecuta al modificar la referencia de la sala en la BD
         root.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -127,26 +133,36 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Funcion para mostrar el mensaje enviado en el chat
+     */
+
     private void enviarMensaje() {
-        // Comprobamos si el EditText esta vacio
+        //PASO 1: Comprobamos si el EditText esta vacio
         if(!et_message.getText().toString().equals("")){
-            // añadimos un mensaje a la lista a la derecha
+            //PASO 2: Añadimos un mensaje a la lista a la derecha
             chatArrayAdapter.add(new Mensaje(false, et_message.getText().toString()));
             et_message.setText("");
         }
     }
 
+    /**
+     * Funcion para traer el mensaje del extraño y mostrarlo
+     * @param dataSnapshot
+     */
     private void recibirMensaje(DataSnapshot dataSnapshot){
 
-        // mapeamos el ultimo mensaje
+        //PASO 1: Mapeamos el ultimo mensaje
         ReceivedMessage msg = dataSnapshot.getValue(ReceivedMessage.class);
 
-        // si el ultimo mensaje no lo has escrito tu, entramos
+        //PASO 2: Comprobamos si el ultimo mensaje no lo ha escrito el usuario
         if(!user.getName().equals(msg.getUser())){
-            // mostramos el mensaje a la izquierda
+            //PASO 3: Mostramos el mensaje a la izquierda
             chatArrayAdapter.add(new Mensaje(true, msg.getMessage()));
         }
     }
+
+
 
 }
 

@@ -24,7 +24,8 @@
         android:stackFromBottom="true"
         android:transcriptMode="alwaysScroll"
         android:divider="@null"
-        android:dividerHeight="0dp"/>
+        android:dividerHeight="0dp"
+        android:padding="5dp"/>
 
 
     <LinearLayout

@@ -40,6 +40,7 @@ public class LookingForActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 match = false;
                 int idCurrentUser = 0;
+                String stranger = "";
                 //Los datos de free_users quedan obtenidos en el parametro dataSnapshot
 
                 //PASO 1: comprobamos que el dataSnapshot contiene hijos
@@ -69,36 +70,42 @@ public class LookingForActivity extends AppCompatActivity {
                                     if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 5){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
+                                        stranger = currentUser.getName();
                                     }
                                     break;
                                 case 2:
                                     if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
+                                        stranger = currentUser.getName();
                                     }
                                     break;
                                 case 3:
                                     if(currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
+                                        stranger = currentUser.getName();
                                     }
                                     break;
                                 case 4:
                                     if(currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
+                                        stranger = currentUser.getName();
                                     }
                                     break;
                                 case 5:
                                     if(currentUser.getSearchCode() == 1 || currentUser.getSearchCode() == 3 || currentUser.getSearchCode() == 5 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
+                                        stranger = currentUser.getName();
                                     }
                                     break;
                                 case 6:
                                     if(currentUser.getSearchCode() == 2 || currentUser.getSearchCode() == 4 || currentUser.getSearchCode() == 5 || currentUser.getSearchCode() == 6){
                                         match = true;
                                         idCurrentUser = currentUser.getId();
+                                        stranger = currentUser.getName();
                                     }
 
 
@@ -120,6 +127,7 @@ public class LookingForActivity extends AppCompatActivity {
                         Intent intent = new Intent(LookingForActivity.this, ChatActivity.class);
                         intent.putExtra("user", user);
                         intent.putExtra("room", room);
+                        intent.putExtra("stranger", stranger);
                         startActivity(intent);
                     }
 

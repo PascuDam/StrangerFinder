@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\9bb6262f50228b45d1f91a02c270d9a4\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\9bb6262f50228b45d1f91a02c270d9a4\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
@@ -17,10 +17,26 @@
             ]
         },
         {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v22/values-v22.xml",
+            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "/home/jnoma/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/0ecef1e79b241a65a8ef75bcf18509cd/res/values-v22/values-v22.xml",
+                    "source": "C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\0ecef1e79b241a65a8ef75bcf18509cd\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v22\\values-v22.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\e51a9e9c64d1995a7685600647216e8c\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
