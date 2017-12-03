@@ -168,6 +168,15 @@ public class ChatActivity extends AppCompatActivity {
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
+                //PASO 1: conectar con firebase
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("free_users");
+
+                //PASO 2: subir el nuevo user a free_users dentro del Json, con push(key)
+                DatabaseReference userKey = myRef.push();
+                userKey.setValue(user);
+                user.setKey(userKey.getKey());
+
                 Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
                 intent.putExtra("user",user);
                 startActivity(intent);
@@ -188,7 +197,15 @@ public class ChatActivity extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Borramos al usuario de la sala y nos vamos la looking for para buscar al siguiente
+                //PASO 1: conectar con firebase
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("free_users");
+
+                //PASO 2: subir el nuevo user a free_users dentro del Json, con push(key)
+                DatabaseReference userKey = myRef.push();
+                userKey.setValue(user);
+                user.setKey(userKey.getKey());
+
                 users.child("user1").removeValue();
                 Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
                 intent.putExtra("user",user);
