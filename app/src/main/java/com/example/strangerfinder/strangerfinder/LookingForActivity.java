@@ -71,6 +71,7 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
+                                        user.setLastUser(currentUser.getId());
                                     }
                                     break;
                                 case 2:
@@ -78,6 +79,7 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
+                                        user.setLastUser(currentUser.getId());
                                     }
                                     break;
                                 case 3:
@@ -85,6 +87,7 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
+                                        user.setLastUser(currentUser.getId());
                                     }
                                     break;
                                 case 4:
@@ -92,6 +95,7 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
+                                        user.setLastUser(currentUser.getId());
                                     }
                                     break;
                                 case 5:
@@ -99,6 +103,7 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
+                                        user.setLastUser(currentUser.getId());
                                     }
                                     break;
                                 case 6:
@@ -106,6 +111,7 @@ public class LookingForActivity extends AppCompatActivity {
                                         match = true;
                                         idCurrentUser = currentUser.getId();
                                         stranger = currentUser.getName();
+                                        user.setLastUser(currentUser.getId());
                                     }
                                     break;
                             }
