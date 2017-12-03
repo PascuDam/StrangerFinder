@@ -62,7 +62,7 @@ public class LookingForActivity extends AppCompatActivity {
                          */
 
                         //ANTES DE NADA COMPROBAMOS QUE NO SEA EL MISMO USUARIO EL QUE ENCUENTRA
-                        if(currentUser.getId() != user.getId()){
+                        if(currentUser.getId() != user.getId() && currentUser.getId() != user.getLastUser()){
 
                             //Si no es el mismo, entonces comprobamos que es compatible
                             switch (user.getSearchCode()){

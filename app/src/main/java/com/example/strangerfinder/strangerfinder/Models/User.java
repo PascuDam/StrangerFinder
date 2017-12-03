@@ -10,7 +10,9 @@ public class User implements Parcelable {
     private String preference;
     private int searchCode;
     private int id;
+    private int lastUser;
     private String key;
+
 
     public User(String name, String sex, String preference, String key) {
         this.name = name;
@@ -24,7 +26,6 @@ public class User implements Parcelable {
         this.id = (int) (Math.random()*100);
     }
 
-
     protected User(Parcel in) {
         name = in.readString();
         sex = in.readString();
@@ -32,6 +33,7 @@ public class User implements Parcelable {
         searchCode = in.readInt();
         id = in.readInt();
         key = in.readString();
+        lastUser = in.readInt();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -90,16 +92,12 @@ public class User implements Parcelable {
         this.key = key;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
-                ", preference='" + preference + '\'' +
-                ", searchCode=" + searchCode +
-                ", id=" + id +
-                ", key='" + key + '\'' +
-                '}';
+    public int getLastUser() {
+        return lastUser;
+    }
+
+    public void setLastUser(int lastUser) {
+        this.lastUser = lastUser;
     }
 
     @Override
@@ -115,5 +113,6 @@ public class User implements Parcelable {
         parcel.writeInt(searchCode);
         parcel.writeInt(id);
         parcel.writeString(key);
+        parcel.writeInt(lastUser);
     }
 }
