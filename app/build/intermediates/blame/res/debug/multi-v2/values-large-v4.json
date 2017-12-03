@@ -1,55 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "C:\\Users\\alvar\\ProyectosAndroid\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/jnoma/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/699a05e0f95acbb99183b2e7fc7700c4/res/values-large-v4/values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
-            "map": [
-                {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\0ecef1e79b241a65a8ef75bcf18509cd\\res\\values-large-v4\\values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
-            "map": [
-                {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\e51a9e9c64d1995a7685600647216e8c\\res\\values-large-v4\\values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
-            "map": [
-                {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\9bb6262f50228b45d1f91a02c270d9a4\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\alvar\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\39c4c67d3833ba86307ebf8ec31fd6d6\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

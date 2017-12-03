@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.strangerfinder.strangerfinder.Models.ChatRoom;
 import com.example.strangerfinder.strangerfinder.Models.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,7 +22,6 @@ public class LookingForActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     Boolean match;
-    String room;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,14 +118,15 @@ public class LookingForActivity extends AppCompatActivity {
 
                     //si hemos hecho match creamos la sala y pasamos a ChatActivity
                     if(match){
+                        ChatRoom chatRoom = new ChatRoom();
                         if(idCurrentUser>user.getId())
-                            room = user.getId()+""+idCurrentUser;
+                            chatRoom.setName(user.getId()+""+idCurrentUser);
                         else
-                            room = idCurrentUser+""+user.getId();
+                            chatRoom.setName(idCurrentUser+""+user.getId());
 
                         Intent intent = new Intent(LookingForActivity.this, ChatActivity.class);
                         intent.putExtra("user", user);
-                        intent.putExtra("room", room);
+                        intent.putExtra("room", chatRoom);
                         intent.putExtra("stranger", stranger);
                         startActivity(intent);
                     }

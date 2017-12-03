@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.strangerfinder.strangerfinder.Helpers.ChatArrayAdapter;
+import com.example.strangerfinder.strangerfinder.Models.ChatRoom;
 import com.example.strangerfinder.strangerfinder.Models.Mensaje;
 import com.example.strangerfinder.strangerfinder.Models.ReceivedMessage;
 import com.example.strangerfinder.strangerfinder.Models.User;
@@ -42,29 +43,44 @@ public class ChatActivity extends AppCompatActivity {
     TextView tv_name;
     @BindView(R.id.bt_next)
     Button btNext;
-    String room;
+    ChatRoom room;
     User user;
-
+    private String strangeName;
     private ChatArrayAdapter chatArrayAdapter;
     private DatabaseReference root;
-
+    private DatabaseReference messagesSection;
+    private DatabaseReference users;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         ButterKnife.bind(this);
 
-
+        DatabaseReference freeUsers;
+        DatabaseReference myKey;
 
         //PASO 1: Obtener el user, la sala y el nombre del compañero
         user = getIntent().getParcelableExtra("user");
-        room = getIntent().getExtras().getString("room").toString();
-        tv_name.setText(tv_name.getText().toString().concat(getIntent().getExtras().getString("stranger")));
+        room = getIntent().getParcelableExtra("room");
+        strangeName = getIntent().getExtras().getString("stranger");
+        tv_name.setText(tv_name.getText().toString().concat(strangeName));
 
-        //PASO 2: Obtener la referencia de la BD de la sala
-        root = FirebaseDatabase.getInstance().getReference("chats_room").child(room);
+        //PASO 2: Obtener la referencia de la BD de la sala y creamos la seccion de mensajes
+        root = FirebaseDatabase.getInstance().getReference("chats_room").child(room.getName());
+        root.child("messages_section");
+        messagesSection = root.child("messages_section");
 
-        //PASO 3: Preparamos el chat
+        //Introducir los usuarios en la chat_room
+        users = root.child("users");
+        users.child("user1").setValue(user.getName());
+        users.child("user2").setValue(strangeName);
+
+        //PASO 3: Borramos al usuario de "free_users"
+        freeUsers = FirebaseDatabase.getInstance().getReference("free_users");
+        myKey = freeUsers.child(user.getKey());
+        myKey.removeValue();
+
+        //PASO 4: Preparamos el chat
         chatArrayAdapter = new ChatArrayAdapter(getApplicationContext(), R.layout.msg_izquierda);
         lvMessages.setTranscriptMode(AbsListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
         lvMessages.setAdapter(chatArrayAdapter);
@@ -83,16 +99,17 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 //PASO 1: Creamos un mapa para gestionar un mensaje en FireBase
-                Map<String, Object> map = new HashMap<String, Object>();
+                Map<String, Object> map = new HashMap<>();
 
+                messagesSection = root.child("messages_section");
                 //PASO 2: Creamos una clave autogenerada para el mensaje
-                String rndKey = root.push().getKey();
+                String rndKey = messagesSection.push().getKey();
 
                 //PASO 3: Añadimos la clave autogenerada a la sala
-                root.updateChildren(map);
+                messagesSection.updateChildren(map);
 
                 //PASO 4: Obtenemos el root del mensaje nuevo a travez de la clave generada
-                DatabaseReference dirMensaje = root.child(rndKey);
+                DatabaseReference dirMensaje = messagesSection.child(rndKey);
 
                 //PASO 5: Creamos un mapa para el mensaje, indicando el nombre del usuario y el mensaje
                 Map<String, Object> map2 = new HashMap<String, Object>();
@@ -109,7 +126,7 @@ public class ChatActivity extends AppCompatActivity {
         });
 
         //Funcion que se ejecuta al modificar la referencia de la sala en la BD
-        root.addChildEventListener(new ChildEventListener() {
+        messagesSection.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 recibirMensaje(dataSnapshot);
@@ -136,12 +153,43 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
+        /*Método para saber si el otro usuario ha abandonado la sala de chat, de ser asi
+        * inmediatemanete te manda al loookingfor activity para emparearte con otro usuario*/
+        users.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
         //Botón para buscar otra persona con la que hablar(volvemos al looking for)
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: poner al otro usuario a buscar otra conversación
-
+                //Borramos al usuario de la sala y nos vamos la looking for para buscar al siguiente
+                users.child("user1").removeValue();
                 Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
                 intent.putExtra("user",user);
                 startActivity(intent);

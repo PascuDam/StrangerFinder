@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\alvar\\ProyectosAndroid\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\65e130cdc060e86d61529b71a19aa717\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\alvar\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\09dc7cdebb848cac5d869946a2a197ea\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,90 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\e51a9e9c64d1995a7685600647216e8c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
-            "map": [
-                {
-                    "source": "/home/jnoma/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/699a05e0f95acbb99183b2e7fc7700c4/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "/home/jnoma/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/b9a3a940037f9c25b65bcb03594528d6/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
-                        "endLines": "2,3,4,5,6,7,8,9,10,14",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
-                    },
-                    "to": {
-                        "startLines": "10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "611,671,741,812,884,942,1000,1106,1170,1233",
-                        "endLines": "10,11,12,13,14,15,16,17,18,22",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "666,736,807,879,937,995,1101,1165,1228,1410"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-            "map": [
-                {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\0ecef1e79b241a65a8ef75bcf18509cd\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\81ee498f92d77dd101afbc2a05966c55\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
-                        "endLines": "2,3,4,5,6,7,8,9,10,14",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
-                    },
-                    "to": {
-                        "startLines": "10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "611,671,741,812,884,942,1000,1106,1170,1233",
-                        "endLines": "10,11,12,13,14,15,16,17,18,22",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "666,736,807,879,937,995,1101,1165,1228,1410"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-            "map": [
-                {
-                    "source": "/home/jnoma/AndroidStudioProjects/StrangerFinder/C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\9bb6262f50228b45d1f91a02c270d9a4\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\alvar\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\39c4c67d3833ba86307ebf8ec31fd6d6\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

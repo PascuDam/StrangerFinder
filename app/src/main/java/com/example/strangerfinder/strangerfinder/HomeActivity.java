@@ -152,7 +152,7 @@ public class HomeActivity extends AppCompatActivity {
             else
                 sex = "both";
         }else{
-            if(rbPreferenceFem.isChecked())
+            if(rbSexFem.isChecked())
                 sex = "female";
             else
                 sex = "male";
