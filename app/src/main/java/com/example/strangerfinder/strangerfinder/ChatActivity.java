@@ -1,5 +1,6 @@
 package com.example.strangerfinder.strangerfinder;
 
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,7 +40,8 @@ public class ChatActivity extends AppCompatActivity {
     EditText et_message;
     @BindView(R.id.tv_name)
     TextView tv_name;
-
+    @BindView(R.id.bt_next)
+    Button btNext;
     String room;
     User user;
 
@@ -51,6 +53,8 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         ButterKnife.bind(this);
+
+
 
         //PASO 1: Obtener el user, la sala y el nombre del compañero
         user = getIntent().getParcelableExtra("user");
@@ -129,6 +133,18 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+
+        //Botón para buscar otra persona con la que hablar(volvemos al looking for)
+        btNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO: poner al otro usuario a buscar otra conversación
+
+                Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
             }
         });
     }

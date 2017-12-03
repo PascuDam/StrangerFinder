@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Dec 02 21:58:09 CET 2017
+#Sun Dec 03 00:10:33 CET 2017
 2.base=/home/jnoma/AndroidStudioProjects/StrangerFinder/app/build/intermediates/transforms/dexMerger/debug/31
 5.set=DEX
 0.path=classes.dex

@@ -114,7 +114,9 @@ ADDED from /home/jnoma/AndroidStudioProjects/StrangerFinder/app/src/main/Android
 	android:name
 		ADDED from /home/jnoma/AndroidStudioProjects/StrangerFinder/app/src/main/AndroidManifest.xml:16:27-74
 activity#com.example.strangerfinder.strangerfinder.ChatActivity
-ADDED from /home/jnoma/AndroidStudioProjects/StrangerFinder/app/src/main/AndroidManifest.xml:19:9-50
+ADDED from /home/jnoma/AndroidStudioProjects/StrangerFinder/app/src/main/AndroidManifest.xml:19:9-82
+	android:theme
+		ADDED from /home/jnoma/AndroidStudioProjects/StrangerFinder/app/src/main/AndroidManifest.xml:19:48-80
 	android:name
 		ADDED from /home/jnoma/AndroidStudioProjects/StrangerFinder/app/src/main/AndroidManifest.xml:19:19-47
 activity#com.example.strangerfinder.strangerfinder.LookingForActivity

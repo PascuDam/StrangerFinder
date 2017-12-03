@@ -130,7 +130,6 @@ public class LookingForActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
 
-
                 }else{
                     //De lo contrario lanzamos un mensaje para indicar que no hay users
                     //TODO: mensaje
