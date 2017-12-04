@@ -172,7 +172,7 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
 
-                if(user.getName().equals(userGone)){
+                if(!user.getName().equals(userGone)){
                     //PASO 1: conectar con firebase
                     DatabaseReference waiting_room = root.child("waiting_room");
 

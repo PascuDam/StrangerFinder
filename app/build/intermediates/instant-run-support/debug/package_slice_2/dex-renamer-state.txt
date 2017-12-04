@@ -1,4 +1,4 @@
-#Mon Dec 04 18:17:14 CET 2017
-base.0=C\:\\Users\\alvar\\ProyectosAndroid\\StrangerFinder\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\78
+#Mon Dec 04 23:44:14 CET 2017
+base.0=C\:\\Users\\alvar\\ProyectosAndroid\\StrangerFinder\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\97
 path.0=classes.dex
 renamed.0=classes.dex
