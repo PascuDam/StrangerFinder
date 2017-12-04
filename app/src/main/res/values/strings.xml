@@ -15,7 +15,9 @@
     <string name="bt_send">Send</string>
     <string name="tv_talking_with">You are talking with </string>
     <string name="bt_next">NEXT</string>
+    <string name="bt_try_again">TRY AGAIN</string>
 
     <!--Messages-->
     <string name="ms_looking_for">Looking for a strange...</string>
+    <string name="ms_waiting_room">The other user give up the chat. Do you want to search another strange?</string>
 </resources>

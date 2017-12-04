@@ -61,6 +61,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //PASO 1: Obtener el user, la sala y el nombre del compañero
         user = getIntent().getParcelableExtra("user");
+        user.setWantToChange(Boolean.FALSE);
         room = getIntent().getParcelableExtra("room");
         strangeName = getIntent().getExtras().getString("stranger");
         tv_name.setText(tv_name.getText().toString().concat(strangeName));
@@ -170,15 +171,14 @@ public class ChatActivity extends AppCompatActivity {
             public void onChildRemoved(DataSnapshot dataSnapshot) {
 
                 //PASO 1: conectar con firebase
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("free_users");
+                DatabaseReference waiting_room = root.child("waiting_room");
 
                 //PASO 2: subir el nuevo user a free_users dentro del Json, con push(key)
-                DatabaseReference userKey = myRef.push();
+                DatabaseReference userKey = waiting_room.push();
                 userKey.setValue(user);
                 user.setKey(userKey.getKey());
 
-                Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
+                Intent intent = new Intent(ChatActivity.this, WaitingActivity.class);
                 intent.putExtra("user",user);
                 startActivity(intent);
             }
@@ -206,6 +206,7 @@ public class ChatActivity extends AppCompatActivity {
                 DatabaseReference userKey = myRef.push();
                 userKey.setValue(user);
                 user.setKey(userKey.getKey());
+                user.setWantToChange(Boolean.TRUE);
 
                 users.child("user1").removeValue();
                 Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
@@ -243,8 +244,6 @@ public class ChatActivity extends AppCompatActivity {
             chatArrayAdapter.add(new Mensaje(true, msg.getMessage()));
         }
     }
-
-
 
 }
 

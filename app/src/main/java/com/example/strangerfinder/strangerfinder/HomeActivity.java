@@ -108,10 +108,12 @@ public class HomeActivity extends AppCompatActivity {
                     //PASO 3: Obtener el codigo de la busqueda
                     obtainingCode();
 
+                    user.setWantToChange(Boolean.TRUE);
                     //PASO 4: subir el nuevo user a free_users dentro del Json, con push(key)
                     userKey = myRef.push();
                     userKey.setValue(user);
                     user.setKey(userKey.getKey());
+                    ;
 
                     //PASO 5: pasar al LookingForActivity para buscar un user para chatear
                     Intent intent = new Intent(HomeActivity.this,LookingForActivity.class);

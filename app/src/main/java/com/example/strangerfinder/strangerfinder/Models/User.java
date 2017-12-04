@@ -11,8 +11,14 @@ public class User implements Parcelable {
     private int searchCode;
     private int id;
     private int lastUser;
+    private boolean wantToChange;
     private String key;
 
+
+    public User(){
+        this.id = (int) (Math.random()*10000);
+        wantToChange = true;
+    }
 
     public User(String name, String sex, String preference, String key) {
         this.name = name;
@@ -20,11 +26,9 @@ public class User implements Parcelable {
         this.preference = preference;
         this.key = key;
         this.id = (int) (Math.random()*10000);
+        wantToChange = true;
     }
 
-    public User() {
-        this.id = (int) (Math.random()*100);
-    }
 
     protected User(Parcel in) {
         name = in.readString();
@@ -32,8 +36,9 @@ public class User implements Parcelable {
         preference = in.readString();
         searchCode = in.readInt();
         id = in.readInt();
-        key = in.readString();
         lastUser = in.readInt();
+        wantToChange = in.readByte() != 0;
+        key = in.readString();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -100,6 +105,14 @@ public class User implements Parcelable {
         this.lastUser = lastUser;
     }
 
+    public boolean isWantToChange() {
+        return wantToChange;
+    }
+
+    public void setWantToChange(boolean wantToChange) {
+        this.wantToChange = wantToChange;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -112,7 +125,8 @@ public class User implements Parcelable {
         parcel.writeString(preference);
         parcel.writeInt(searchCode);
         parcel.writeInt(id);
-        parcel.writeString(key);
         parcel.writeInt(lastUser);
+        parcel.writeByte((byte) (wantToChange ? 1 : 0));
+        parcel.writeString(key);
     }
 }

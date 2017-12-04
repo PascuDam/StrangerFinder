@@ -29,6 +29,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.strangerfinder.strangerfinder.HomeActivity" >
             <intent-filter>
@@ -41,6 +42,7 @@
             android:name="com.example.strangerfinder.strangerfinder.ChatActivity"
             android:theme="@style/ChatTheme" />
         <activity android:name="com.example.strangerfinder.strangerfinder.LookingForActivity" />
+        <activity android:name="com.example.strangerfinder.strangerfinder.WaitingActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

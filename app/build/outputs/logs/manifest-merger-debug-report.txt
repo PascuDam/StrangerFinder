@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [com.android.support:design:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\09dc7cdebb848cac5d869946a2a197ea\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\39c4c67d3833ba86307ebf8ec31fd6d6\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\046102e30e0b2e1b534fcb559d2b3d18\AndroidManifest.xml:2:1-11:12
@@ -28,25 +28,25 @@ MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\alvar\.gradle\
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\37ac3128b312fe2493bc689b8957f25d\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\ef01fe56a9f41d1b9ac129133a2fed82\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0a5d735e5490d9d3fef2b9c077cba516\AndroidManifest.xml:17:1-31:12
-INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:3:5-56
 		INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:5:5-21:19
+ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.android.support:design:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\09dc7cdebb848cac5d869946a2a197ea\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\09dc7cdebb848cac5d869946a2a197ea\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\alvar\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\39c4c67d3833ba86307ebf8ec31fd6d6\AndroidManifest.xml:29:5-20
@@ -114,15 +114,19 @@ ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:16:27-74
 activity#com.example.strangerfinder.strangerfinder.ChatActivity
-ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:19:9-82
+ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:19:9-21:48
 	android:theme
-		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:19:48-80
+		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:21:13-45
 	android:name
-		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:19:19-47
+		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:20:13-41
 activity#com.example.strangerfinder.strangerfinder.LookingForActivity
-ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:20:9-65
+ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:22:9-56
 	android:name
-		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:20:19-53
+		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:22:19-53
+activity#com.example.strangerfinder.strangerfinder.WaitingActivity
+ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:23:9-62
+	android:name
+		ADDED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml:23:19-50
 uses-sdk
 INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\alvar\ProyectosAndroid\StrangerFinder\app\src\main\AndroidManifest.xml

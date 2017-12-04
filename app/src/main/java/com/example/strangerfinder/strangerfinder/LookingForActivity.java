@@ -35,7 +35,7 @@ public class LookingForActivity extends AppCompatActivity {
         myRef = database.getReference("free_users");
 
         //PASO 3: Buscar en free_users, usuarios que coincidan
-        myRef.addValueEventListener(new ValueEventListener() {
+       myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 match = false;
@@ -62,7 +62,7 @@ public class LookingForActivity extends AppCompatActivity {
                          */
 
                         //ANTES DE NADA COMPROBAMOS QUE NO SEA EL MISMO USUARIO EL QUE ENCUENTRA
-                        if(currentUser.getId() != user.getId() && currentUser.getId() != user.getLastUser()){
+                        if(currentUser.getId() != user.getId() && user.getLastUser()!=currentUser.getId()){
 
                             //Si no es el mismo, entonces comprobamos que es compatible
                             switch (user.getSearchCode()){
@@ -134,6 +134,7 @@ public class LookingForActivity extends AppCompatActivity {
                         intent.putExtra("user", user);
                         intent.putExtra("room", chatRoom);
                         intent.putExtra("stranger", stranger);
+                        myRef.removeEventListener(this);
                         startActivity(intent);
                     }
 
