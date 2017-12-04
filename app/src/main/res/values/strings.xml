@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StrangerFinder</string>
+    <string name="app_name">RChat</string>
 
     <!--Elements-->
     <string name="bt_start">Start!</string>
@@ -16,6 +16,7 @@
     <string name="tv_talking_with">You are talking with </string>
     <string name="bt_next">NEXT</string>
     <string name="bt_try_again">TRY AGAIN</string>
+
 
     <!--Messages-->
     <string name="ms_looking_for">Looking for a strange...</string>
