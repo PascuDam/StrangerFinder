@@ -1,36 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\9bb6262f50228b45d1f91a02c270d9a4\\res\\values-v13\\values-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "58",
-                        "endOffsets": "109"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\0ecef1e79b241a65a8ef75bcf18509cd\\res\\values-v13\\values-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "58",
-                        "endOffsets": "109"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v13\\values-v13.xml",
             "map": [
                 {

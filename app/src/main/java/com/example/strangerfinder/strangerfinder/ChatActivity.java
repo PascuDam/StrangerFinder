@@ -55,7 +55,7 @@ public class ChatActivity extends AppCompatActivity {
         //PASO 1: Obtener el user, la sala y el nombre del compañero
         user = getIntent().getParcelableExtra("user");
         room = getIntent().getExtras().getString("room").toString();
-        tv_name.setText(tv_name.getText().toString().concat(getIntent().getExtras().getString("stranger")));
+        tv_name.setText(tv_name.getText().toString().concat(" "+getIntent().getExtras().getString("stranger")));
 
         //PASO 2: Obtener la referencia de la BD de la sala
         root = FirebaseDatabase.getInstance().getReference("chats_room").child(room);

@@ -13,8 +13,9 @@
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tv_talking_with"
-        android:textAlignment="center"/>
+        android:text= "@string/tv_talking_with"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
 
     <ListView
         android:id="@+id/lw_messages"
@@ -25,7 +26,9 @@
         android:transcriptMode="alwaysScroll"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
 
     <LinearLayout
@@ -37,7 +40,8 @@
             android:id="@+id/et_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textColor="@color/black"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/bt_send"

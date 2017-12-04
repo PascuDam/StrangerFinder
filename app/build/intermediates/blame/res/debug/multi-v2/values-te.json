@@ -21,50 +21,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\jnoma\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\cae9899ac92ca6dd510d7fb342a80cae\\res\\values-te\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "285",
-                        "endColumns": "198",
-                        "endOffsets": "483"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "105",
-                        "endColumns": "198",
-                        "endOffsets": "299"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\Desktop\\StrangerFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\jnoma\\AndroidStudioProjects\\StrangerFinder\\C:\\Users\\Jimmy\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-10.0.1.aar\\08d45871d263e2b91a36cb91d155247a\\res\\values-te\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "285",
-                        "endColumns": "198",
-                        "endOffsets": "483"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "105",
-                        "endColumns": "198",
-                        "endOffsets": "299"
-                    }
-                }
-            ]
         }
     ]
 }
