@@ -21,6 +21,8 @@ public class LookingForActivity extends AppCompatActivity {
     User user;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    DatabaseReference freeUsers;
+    DatabaseReference userKey;
     Boolean match;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,16 @@ public class LookingForActivity extends AppCompatActivity {
 
         //PASO 2: Obtener la DB y la referencia
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("free_users");
+        myRef = database.getReference();
+        freeUsers = myRef.child("free_users");
 
-        //PASO 3: Buscar en free_users, usuarios que coincidan
-       myRef.addValueEventListener(new ValueEventListener() {
+        //PASO 3: subir el nuevo user a free_users dentro del Json, con push(key)
+        userKey = freeUsers.push();
+        userKey.setValue(user);
+        user.setKey(userKey.getKey());
+
+        //PASO 4: Buscar en free_users, usuarios que coincidan
+        freeUsers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 match = false;
@@ -134,7 +142,7 @@ public class LookingForActivity extends AppCompatActivity {
                         intent.putExtra("user", user);
                         intent.putExtra("room", chatRoom);
                         intent.putExtra("stranger", stranger);
-                        myRef.removeEventListener(this);
+                        freeUsers.removeEventListener(this);
                         startActivity(intent);
                     }
 

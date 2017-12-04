@@ -50,6 +50,8 @@ public class ChatActivity extends AppCompatActivity {
     private DatabaseReference root;
     private DatabaseReference messagesSection;
     private DatabaseReference users;
+    private String userGone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,17 +172,19 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
 
-                //PASO 1: conectar con firebase
-                DatabaseReference waiting_room = root.child("waiting_room");
+                if(user.getName().equals(userGone)){
+                    //PASO 1: conectar con firebase
+                    DatabaseReference waiting_room = root.child("waiting_room");
 
-                //PASO 2: subir el nuevo user a free_users dentro del Json, con push(key)
-                DatabaseReference userKey = waiting_room.push();
-                userKey.setValue(user);
-                user.setKey(userKey.getKey());
+                    //PASO 2: subir al usuario a chat_room
+                    DatabaseReference userKey = waiting_room.push();
+                    userKey.setValue(user);
+                    user.setKey(userKey.getKey());
 
-                Intent intent = new Intent(ChatActivity.this, WaitingActivity.class);
-                intent.putExtra("user",user);
-                startActivity(intent);
+                    Intent intent = new Intent(ChatActivity.this, WaitingActivity.class);
+                    intent.putExtra("user",user);
+                    startActivity(intent);
+                }
             }
 
             @Override
@@ -198,17 +202,12 @@ public class ChatActivity extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //PASO 1: conectar con firebase
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("free_users");
-
-                //PASO 2: subir el nuevo user a free_users dentro del Json, con push(key)
-                DatabaseReference userKey = myRef.push();
-                userKey.setValue(user);
-                user.setKey(userKey.getKey());
                 user.setWantToChange(Boolean.TRUE);
+                userGone = user.getName();
 
+                //Borrar al usuario de la chat_room
                 users.child("user1").removeValue();
+
                 Intent intent = new Intent(ChatActivity.this, LookingForActivity.class);
                 intent.putExtra("user",user);
                 startActivity(intent);
