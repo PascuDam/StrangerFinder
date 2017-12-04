@@ -183,6 +183,8 @@ public class ChatActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(ChatActivity.this, WaitingActivity.class);
                     intent.putExtra("user",user);
+
+                    users.removeEventListener(this);
                     startActivity(intent);
                 }
             }
